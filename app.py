@@ -34,10 +34,11 @@ def main():
 
     for number in range(start, finish + 1):
         # print(f"{number}: {multiplicative_persistence(number)}")
-        if multiplicative_persistence(number) > highest_steps_count:
-            highest_steps_count = multiplicative_persistence(number)
+        result = multiplicative_persistence(number)
+        if result > highest_steps_count:
+            highest_steps_count = result
             highest_steps_number = number
-        if number % 1000000 == 0:
+        if number % 10000000 == 0:
             print(f"Upto {number} so far: {highest_steps_number}")
     print(f"Highest step count: {highest_steps_number} at {highest_steps_count}")
 
