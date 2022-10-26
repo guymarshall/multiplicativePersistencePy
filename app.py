@@ -37,7 +37,7 @@ def main():
     highest_steps_count = 11
     highest_steps_number = 277777788888899
 
-    number = 0
+    number = highest_steps_number
 
     while highest_steps_count < 12:
         # print(f"{number}: {multiplicative_persistence(number)}")
@@ -46,7 +46,7 @@ def main():
             highest_steps_count = result
             highest_steps_number = number
         if number % 1000000 == 0:
-            print(f"Upto {number} so far with {result} steps")
+            print(f"{number}: {highest_steps_number} has highest steps of {highest_steps_count}")
         number += 1
     print(f"Highest step count: {highest_steps_number} at {highest_steps_count}")
 
