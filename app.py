@@ -14,6 +14,11 @@ def product(input):
 
 @nb.njit
 def multiplicative_persistence(user_input):
+    str_number = str(user_input)
+    if "0" in str_number:
+        return 0
+    if "2" in str_number and "5" in str_number:
+        return 1
     steps = 0
 
     # 10 is smallest double digit number
